@@ -4,7 +4,6 @@
 
 - **Platform:** Hack The Box
 - **Category:** Web
-- **Target:** `http://154.57.164.71:35186/`
 - **Tools Used:** Terminal, cURL, Python
 
 ## 🎯 Objective
@@ -15,9 +14,7 @@ Investigate the Flag Command web application, discover the command required to p
 
 The challenge takes place in a mysterious forest maze filled with whimsical characters and hidden commands. The objective is to explore the application, identify the correct command, and uncover the flag.
 
-![Flag Command Website](screenshots/flag-command-website.png)
-
-*Figure 1: Flag Command challenge homepage.*
+![Flag Command Website](<Flag Command.png>)
 
 ## 🔍 Vulnerability Explanation
 
