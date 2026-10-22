@@ -14,7 +14,7 @@ Investigate the Labyrinth Linguist web application, identify the template inject
 ## 🌐 Website Preview
 
 The challenge features a mysterious interface where users can enter text to translate English into the fictional language Voxalith. By investigating how the application processes user input, it is possible to identify a server-side template injection vulnerability.
-
+![Labyrinth Linguist Website](<ss2.png>)
 
 
 ## 🔍 Vulnerability Explanation
