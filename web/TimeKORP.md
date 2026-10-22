@@ -75,14 +75,6 @@ curl -sG "$TARGET/" --data-urlencode "format='; cat /flag; #" | grep -oE 'HTB\{[
 
 Filters the HTTP response for a flag matching the expected `HTB{...}` format. This works only if the command executes, the flag is at `/flag`, and the response contains the flag text.
 
-## 🧠 Key Takeaways
-
-- **OS Command Injection:** Can occur when untrusted input is incorporated into a shell command unsafely.
-- **Burp Suite Repeater:** Allows manual modification and resending of HTTP requests.
-- **cURL:** Sends HTTP requests directly from the terminal.
-- **`cat`:** Prints a file's contents.
-- **Input Validation:** Applications should avoid passing untrusted input into shell commands and use safer alternatives where possible.
-
 ## ✅ Conclusion
 
 The TimeKORP challenge demonstrated how insufficient protection of user-controlled input can lead to OS command injection. Burp Suite Repeater helped modify the HTTP request, while the injected command was used to retrieve the CTF flag.
