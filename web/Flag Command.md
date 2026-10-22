@@ -14,7 +14,7 @@ Investigate the Flag Command web application, discover the command required to p
 
 The challenge takes place in a mysterious forest maze filled with whimsical characters and hidden commands. The objective is to explore the application, identify the correct command, and uncover the flag.
 
-![Flag Command Website](<Flag Command.png>)
+![Flag Command Website](<Ss.png>)
 
 ## 🔍 Vulnerability Explanation
 
