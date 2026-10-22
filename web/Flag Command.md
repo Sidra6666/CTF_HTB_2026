@@ -63,14 +63,6 @@ Submit the correct command identified during the investigation and inspect the r
 HTB{...}
 ```
 
-## 📸 Evidence
-
-Add screenshots showing the website, relevant terminal commands, and the successful flag retrieval.
-
-![Terminal Evidence](screenshots/flag-command-terminal.png)
-
-*Figure 2: Terminal investigation and challenge results.*
-
 ## ✅ Conclusion
 
 This challenge provided practical experience with web application inspection, HTTP requests, API analysis, and command-based challenge logic using cURL and Python.
