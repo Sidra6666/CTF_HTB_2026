@@ -79,9 +79,7 @@ The output showed:
 
 This confirmed that the input overwrote the buffer, alignment slot, and target. However, the program returned `[-] You failed!` because the target contained the wrong value.
 
-## 5. Read the Flag
-
-The challenge displayed the following flag in its output:
+##The challenge displayed the following flag in its output
 
 
 ## Key Takeaways
