@@ -54,4 +54,4 @@ HTB{...}
 ```
 **Challenge completed!** 🚀
 
-*Disclaimer: This write-up is for educational purposes and authorized CTF practice.*
+
