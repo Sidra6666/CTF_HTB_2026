@@ -15,10 +15,10 @@ Connect to the challenge service, interpret the scenarios, and automate response
 ## 🔑 Scenario Mappings
 
 | Scenario | Required Action |
-|---|---|
-| `GORGE` | `STOP` |
-| `PHREAK` | `DROP` |
-| `FIRE` | `ROLL` |
+| -------- | --------------- |
+| `GORGE`  | `STOP`          |
+| `PHREAK` | `DROP`          |
+| `FIRE`   | `ROLL`          |
 
 When multiple scenarios appear, combine the corresponding actions using hyphens (`-`).
 
@@ -39,7 +39,15 @@ Output: STOP-ROLL-DROP
 
 ## 💻 Solution
 
-The challenge can be automated using Python and the `socket` library to communicate with the remote server. Regular expressions extract the scenarios, and a dictionary maps each scenario to its required action.
+### How It Works
+
+1. **Connect:** Python's `socket` library establishes a TCP connection to the remote challenge server.
+2. **Start:** The script sends `y` when the server asks whether we are ready.
+3. **Receive:** The script reads the data sent by the server.
+4. **Extract:** Regular expressions identify the scenario keywords: `GORGE`, `PHREAK`, and `FIRE`.
+5. **Map:** A dictionary converts each scenario into its corresponding action.
+6. **Respond:** The actions are joined with hyphens (`-`) and sent back to the server.
+7. **Repeat:** The script continues answering until the game ends or the connection closes.
 
 ### Python Script
 
@@ -47,8 +55,8 @@ The challenge can be automated using Python and the `socket` library to communic
 import socket
 import re
 
-HOST = "154.57.164.82"
-PORT = 38220
+HOST = "154.57.164.65"
+PORT = 40160
 
 actions = {
     "GORGE": "STOP",
@@ -95,29 +103,14 @@ with socket.create_connection((HOST, PORT), timeout=15) as s:
             break
 ```
 
-### Execution
-
-Save the script as `solve.py` and run:
-
-```bash
-python3 solve.py
-```
-
-### How It Works
-
-1. **Connect:** Establishes a TCP connection to the challenge server.
-2. **Start:** Sends `y` to begin the game.
-3. **Extract:** Uses regular expressions to identify `GORGE`, `PHREAK`, and `FIRE`.
-4. **Map:** Converts each scenario into `STOP`, `DROP`, or `ROLL`.
-5. **Respond:** Joins multiple actions with hyphens and sends the answer.
-6. **Repeat:** Continues responding until the challenge finishes.
 
 ## 🧠 Key Takeaways
 
 - Automating repetitive CTF tasks with Python.
 - Using TCP sockets for client-server communication.
 - Extracting keywords with regular expressions.
-- Understanding simple protocol-based challenges.
+- Mapping inputs to outputs using a dictionary.
+- Understanding basic protocol automation.
 
 ## 🏁 Flag
 
