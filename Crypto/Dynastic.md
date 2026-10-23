@@ -29,7 +29,7 @@ python3 -c 's=open("output.txt").read().splitlines()[1]; print("".join(chr((ord(
 
 ### 🏁 Flag
 ```text
-HTB{DID_YOU_KNOW_ABOUT_THE_TRITHEMIUS_CIPHER?!_IT_IS_SIMILAR_TO_CAESAR_CIPHER}
+HTB{...}
 ```
 
 ## ✅ Conclusion
