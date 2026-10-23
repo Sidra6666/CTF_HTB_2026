@@ -1,6 +1,6 @@
 # HTB — Jailbreak (Web)
 
-
+<img src='pipboy.png' width=500>
 ## Scenario
 
 The crew obtains an experimental Pip-Boy and attempts to bypass its security through a firmware update. The challenge involves analyzing the firmware-update functionality and exploiting insecure XML processing to retrieve a protected file.
