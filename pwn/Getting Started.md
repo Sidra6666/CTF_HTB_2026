@@ -83,9 +83,6 @@ This confirmed that the input overwrote the buffer, alignment slot, and target. 
 
 The challenge displayed the following flag in its output:
 
-```text
-HTB{b0f_tut0r14l5_4r3_g00d}
-```
 
 ## Key Takeaways
 
@@ -95,6 +92,4 @@ HTB{b0f_tut0r14l5_4r3_g00d}
 - Little-endian systems store the least significant byte first.
 - Overwriting a target does not guarantee success; its value must satisfy the program's condition.
 
-## Flag
-
-`HTB{b0f_tut0r14l5_4r3_g00d}`
+`
