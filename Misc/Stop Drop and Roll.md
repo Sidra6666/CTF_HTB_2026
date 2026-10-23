@@ -29,14 +29,6 @@ Input:  GORGE, FIRE, PHREAK
 Output: STOP-ROLL-DROP
 ```
 
-## 🛠️ Tools Used
-
-- Python 3
-- TCP sockets
-- Regular expressions
-- Linux/macOS terminal
-- Basic network protocol analysis
-
 ## 💻 Solution
 
 ### How It Works
