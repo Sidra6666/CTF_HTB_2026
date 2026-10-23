@@ -4,7 +4,6 @@
 
 - **Challenge:** Dynamic Paths
 - **Category:** Coding
-- **Target:** `154.57.164.75:32507`
 - **Language:** Python 3
 - **Status:** ✅ Solved
 
