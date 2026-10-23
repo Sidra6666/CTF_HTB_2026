@@ -1,8 +1,8 @@
 # 🎮 HTB — Stop Drop and Roll
 
 **Category:** Misc  
-**Platform:** Hack The Box  
-**Difficulty:** Beginner  
+
+<img src="stopdropandroll.png" alt="Stop Drop and Roll" width="500">
 
 ## 📝 Challenge Description
 
@@ -46,24 +46,12 @@ Output: STOP-ROLL-DROP
 5. Send the actions in the correct order, separated by hyphens.
 6. Continue until the server returns the flag.
 
-## 🧠 What I Learned
-
-- Establishing TCP connections with Python.
-- Automating repetitive challenge interactions.
-- Parsing server responses with regular expressions.
-- Handling multiple inputs in a single round.
-- Understanding how simple protocol automation can solve CTF challenges.
 
 ## 🏁 Flag
 
 ```text
-HTB{PASTE_YOUR_FLAG_HERE}
+HTB{...}
 ```
-
-*Replace the placeholder with the flag you obtained.*
-
----
-
 **Challenge completed!** 🚀
 
 *Disclaimer: This write-up is for educational purposes and authorized CTF practice.*
