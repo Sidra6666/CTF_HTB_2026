@@ -1,5 +1,5 @@
 # 🔎 Hack The Box — An Unusual Sighting
-
+<img src="Forensics1.png" width="400" alt="Forensics challenge screenshot">
 
 ## 🎯 Objective
 Analyze SSH authentication logs and Bash command history to identify suspicious login activity and determine what the attacker did after gaining access to the system.
