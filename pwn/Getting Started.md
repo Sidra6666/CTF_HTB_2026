@@ -1,11 +1,6 @@
 # HTB — Getting Started (Pwn)
 
-## Challenge Information
-
-- **Challenge:** Getting Started
-- **Category:** Pwn
-- **Difficulty:** Very Easy
-- **Target:** `154.57.164.81:44638`
+<img src='pwn1.png' width =500 >
 
 ## Description
 
