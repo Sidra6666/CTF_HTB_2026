@@ -2,9 +2,7 @@
 
 ## Challenge Details
 - **Category:** Misc
-- **IP:** `154.57.164.71`
-- **Port:** `32169`
-
+- 
 ## Commands
 
 Connect to the challenge manually:
