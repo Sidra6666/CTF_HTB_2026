@@ -1,8 +1,5 @@
 # Character — Misc CTF
 
-## Challenge Details
-- **Category:** Misc
-- 
 ## Commands
 
 Connect to the challenge manually:
