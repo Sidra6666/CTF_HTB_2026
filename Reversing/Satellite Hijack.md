@@ -1,24 +1,10 @@
 # 🛰️ Satellite Hijack — Hack The Box
 
-**Category:** Reversing  
-**Difficulty:** Easy  
-**Platform:** Hack The Box (HTB)  
-**Challenge:** Satellite Hijack
-
 ## 📖 Challenge Description
 
 The crew discovers an abandoned bunker containing a satellite communication control panel. The software has been tampered with, preventing legitimate satellite control codes from being transmitted.
 
 Our objective is to reverse-engineer the executable, identify the hidden instructions, and recover the flag.
-
-## 🛠️ Tools Used
-
-- macOS Terminal
-- Python 3
-- `strings`
-- `grep`
-- `xxd`
-- XOR Decoding
 
 ## 🔍 Step 1: Extracting the Challenge Files
 
