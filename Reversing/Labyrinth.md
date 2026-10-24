@@ -1,5 +1,5 @@
 # 🔐 Labyrinth — Pwn CTF Write-up
-
+<img src ='ln.png' width=500>
 
 ## 📝 Challenge Description
 
