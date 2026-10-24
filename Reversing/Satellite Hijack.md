@@ -213,36 +213,19 @@ After decoding, we had recovered two components.
 **Part 1 — Flag prefix**
 
 ```text
-HTB{
+HTB{..
 ```
 
 **Part 2 — Decoded string**
 
 ```text
-l4y3r5_0n_l4y3r5_0n_l4y3r5!}
+....}
 ```
 
 We combined them to reconstruct the candidate flag.
-
-### 🚩 Final Flag
-
-```text
-HTB{l4y3r5_0n_l4y3r5_0n_l4y3r5!}
-```
-
+HTB{..}
 *Note: This candidate flag was recovered through static analysis and has not been confirmed by a successful HTB submission.*
 
-## 🧠 What I Learned
-
-Through this challenge, I explored several reverse-engineering concepts:
-
-1. **Static Analysis:** Examining compiled executables without running them.
-2. **Shared Libraries:** Understanding how executables depend on `.so` files.
-3. **String Analysis:** Using `strings` and `grep` to locate interesting information.
-4. **XOR Obfuscation:** Understanding how XOR can conceal data inside binaries.
-5. **Binary Inspection:** Using `xxd` to examine hexadecimal data.
-6. **Python Automation:** Writing scripts to extract and decode hidden bytes.
-7. **Flag Reconstruction:** Combining recovered components to reconstruct a candidate flag.
 
 ## 💡 Conclusion
 
