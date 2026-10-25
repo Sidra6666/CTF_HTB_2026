@@ -1,5 +1,5 @@
 # 🧠 Chrono Mind — HackTheBox CTF Writeup
-
+<img src='m.png' width=500>
 ## 📖 Challenge Description
 
 ChronoMind was an experimental AI system developed to assist military operations through real-time analysis and strategic decision-making.
