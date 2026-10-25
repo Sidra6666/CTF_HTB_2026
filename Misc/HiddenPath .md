@@ -85,8 +85,3 @@ Never execute user-controlled commands directly. Use strict input validation, fi
 
 ---
 
-**Challenge:** Hidden Path  
-**Category:** Miscellaneous  
-**Status:** 🏴‍☠️ Pwned
-
-*For educational purposes only — solved in an authorized CTF environment.*
