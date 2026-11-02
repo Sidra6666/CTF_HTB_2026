@@ -97,7 +97,7 @@ This challenge helped me practise:
 **Flag:**
 
 ```text
-HTB{PASTE_YOUR_FLAG_HERE}
+HTB{...}
 ```
 
 ---
